@@ -16,9 +16,9 @@ Key finding: **54.7% of orders arrive late**, and the delay rate is driven overw
 
 | File | Description |
 |---|---|
-| `Untitled0.ipynb` | Main analysis notebook: data cleaning, EDA, profitability analysis, bottleneck/root-cause detection, time-based patterns, and ML modeling |
+| `Supply Chain Analysis Project.ipynb` | Main analysis notebook: data cleaning, EDA, profitability analysis, bottleneck/root-cause detection, time-based patterns, and ML modeling |
 | `DataCoSupplyChainDataset.csv` | Source dataset (not included if too large for the repo — see [Data](#data) below) |
-| `DataCo_Supply_Chain_Report.docx` | Formatted supply chain performance report (executive summary, KPIs, findings, recommendations) |
+| `DataCo Supply Chain Performance Report.pdf` | Formatted supply chain performance report (executive summary, KPIs, findings, recommendations) |
 
 ## Data
 
@@ -72,10 +72,10 @@ Run all cells in order. The final cells fit and evaluate the classifiers; re-run
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
 |---|---|---|---|---|---|
-| Decision Tree | 0.741 | 0.768 | 0.786 | 0.777 | 0.744 |
-| **Random Forest** | 0.740 | 0.772 | 0.775 | 0.773 | **0.827** |
-| KNN | 0.684 | 0.742 | 0.687 | 0.714 | 0.753 |
-| Gradient Boosting | 0.725 | 0.893 | 0.590 | 0.711 | 0.782 |
+| Decision Tree | 0.719 | 0.768 | 0.730 | 0.748 | 0.728 |
+| **Random Forest** | 0.738 | 0.785 | 0.746 | 0.765 | **0.825** |
+| KNN | 0.697 | 0.761 | 0.686 | 0.722 | 0.767 |
+| Gradient Boosting | 0.725 | 0.893 | 0.590 | 0.710 | 0.778 |
 | Logistic Regression | 0.697 | 0.833 | 0.590 | 0.690 | 0.709 |
 
 Top predictive features (Random Forest): order hour, scheduled shipping days, shipping mode, order month, order region, product category.
