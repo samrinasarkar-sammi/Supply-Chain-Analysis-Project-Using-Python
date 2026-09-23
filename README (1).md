@@ -80,6 +80,3 @@ Run all cells in order. The final cells fit and evaluate the classifiers; re-run
 
 Top predictive features (Random Forest): order hour, scheduled shipping days, shipping mode, order month, order region, product category.
 
-## License
-
-Add a license of your choice (e.g. MIT) if you plan to make this repository public.
