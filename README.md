@@ -80,3 +80,9 @@ Run all cells in order. The final cells fit and evaluate the classifiers; re-run
 
 Top predictive features (Random Forest): order hour, scheduled shipping days, shipping mode, order month, order region, product category.
 
+## About Me
+
+**Samrina Sarkar Sammi** — M2 Data Science & Network Intelligence student, Télécom SudParis
+
+[LinkedIn](https://www.linkedin.com/in/samrina-sarkar-sammi-a8b716424/) · [GitHub](https://github.com/samrinasarkar-sammi) · samrinasarkar@gmail.com
+
