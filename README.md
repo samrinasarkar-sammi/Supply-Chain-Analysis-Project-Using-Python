@@ -1,45 +1,53 @@
-# DataCo Supply Chain Performance Analysis
+# Supply Chain Network Intelligence: Delay Risk, Structural Resilience & Demand Forecasting
 
-Exploratory data analysis and machine learning project on the [DataCo Smart Supply Chain dataset](https://data.mendeley.com/datasets/8gx2fvg2k6/5), investigating delivery delays, profitability, and building a predictive model for late-delivery risk.
+A multi-method analysis of the [DataCo Smart Supply Chain dataset](https://data.mendeley.com/datasets/8gx2fvg2k6/5) — combining predictive risk modeling, network science, and time series forecasting to understand not just *what* is going wrong in delivery performance, but *where the structural leverage points are* and *what's likely to happen next*.
 
 ## Overview
 
-This project analyzes 172,765 orders to answer three questions:
+This project investigates four questions:
 
 1. **How reliable is delivery, and what drives late shipments?**
 2. **Does lateness actually hurt profitability?**
 3. **Can late-delivery risk be predicted before an order ships?**
+4. **NEW — Where are the structurally critical points in the logistics network, and how resilient is it to disruption? What does near-term demand look like?**
 
-Key finding: **54.7% of orders arrive late**, and the delay rate is driven overwhelmingly by *shipping mode* (First Class: 100% late, Second Class: 79.8%, Standard: 39.8%) rather than by region, customer segment, or time of year — pointing to a delivery-promise mismatch rather than a seasonal or capacity problem. Per-order profit stays roughly flat ($20–23) regardless of delay length, so the business risk from lateness is reputational, not margin-driven.
+**Key findings:**
+- **54.7% of orders arrive late**, driven overwhelmingly by *shipping mode* (First Class: 100% late, Second Class: 79.8%, Standard: 39.8%) — not by region, segment, or season. Region and segment delay rates cluster tightly (54–59%), while shipping mode swings from 0% to 100%.
+- Per-order profit stays roughly flat ($20–23) regardless of delay length — the business risk from lateness is reputational, not a direct margin hit.
+- A Random Forest model predicts late-delivery risk at booking time with **0.825 ROC-AUC**.
+- **Network analysis** identifies `DEPT: Fitness` as the most structurally central node (betweenness centrality 0.797) in the Region–Department–Shipping Mode network — but a disruption simulation shows the network remains fully connected even after removing it, indicating real structural redundancy rather than a single point of failure.
+- **Demand forecasting** (Holt-Winters exponential smoothing) projects sales for the next 6 months, validated against a 6-month holdout (MAPE 72.45% — a meaningful limitation, discussed in the full report, likely reflecting how few years of data are available for reliable seasonal estimation).
 
 ## Repository Contents
 
 | File | Description |
 |---|---|
-| `Supply Chain Analysis Project.ipynb` | Main analysis notebook: data cleaning, EDA, profitability analysis, bottleneck/root-cause detection, time-based patterns, and ML modeling |
-| `DataCoSupplyChainDataset.csv` | Source dataset (not included if too large for the repo — see [Data](#data) below) |
-| `DataCo Supply Chain Performance Report.pdf` | Formatted supply chain performance report (executive summary, KPIs, findings, recommendations) |
+| `Supply_Chain_Analysis_Project.ipynb` | Full analysis notebook: cleaning, EDA, profitability, bottleneck/root-cause detection, time-based patterns, ML risk modeling, network analysis, and forecasting |
+| `DataCoSupplyChainDataset.csv` | Source dataset (see [Data](#data) below) |
+| `Supply_Chain_Network_Intelligence_Report.docx` | Full written report: executive summary, KPIs, findings, network analysis, forecasting, dashboard, recommendations, and proposed next-phase research direction |
+| `supply_chain_cleaned.csv` | Cleaned, feature-engineered dataset (dashboard source) |
+| `network_centrality.csv` | Node-level degree/betweenness centrality results |
+| `network_edges.csv` | Network edge list (Region–Department–Shipping Mode flows) |
+| `network_graph.png` | Visualized logistics network, sized/colored by centrality |
+| `sales_timeline.csv` | Combined actual + forecasted monthly sales |
+| `dashboard.pbix` | Interactive Power BI dashboard |
 
 ## Data
 
-The dataset contains order-level supply chain data: shipping mode, order status, delivery dates, product category, customer segment, region, and profit per order. Download it from [Mendeley Data](https://data.mendeley.com/datasets/8gx2fvg2k6/5) and place `DataCoSupplyChainDataset.csv` in the project root before running the notebook. The CSV uses `latin-1` encoding.
+Order-level supply chain data: shipping mode, order status, delivery dates, product category, customer segment, region, and profit per order. Download from [Mendeley Data](https://data.mendeley.com/datasets/8gx2fvg2k6/5); the CSV uses `latin-1` encoding.
 
 ## Analysis Pipeline
 
-1. **Data cleaning** — drop redundant/PII columns, remove canceled orders, parse order/shipping dates
-2. **Feature engineering** — `Order Processing Time`, `Delay`, `Is_Delayed`, `Profitability Flag`, calendar features (month/day/hour)
+1. **Data cleaning** — drop redundant/PII columns, parse order/shipping dates
+2. **Feature engineering** — `Order Processing Time`, `Delay`, `Is_Delayed`, `Profitability Flag`, calendar features
 3. **EDA** — KPI summary, profitability distribution, delay distribution vs. profit
-4. **Bottleneck detection** — delay % by region, customer segment, shipping mode, order status, type, department
+4. **Bottleneck detection** — delay % by region, segment, shipping mode, order status, type, department
 5. **Root cause analysis** — factor drill-down within the worst-performing region
 6. **Time-based analysis** — delay % by month, day of week, hour of day
-7. **Machine learning** — predicting `Late_delivery_risk` with frequency-encoded categoricals and class balancing, comparing:
-   - Logistic Regression
-   - Decision Tree
-   - Random Forest
-   - Gradient Boosting
-   - K-Nearest Neighbors
-
-   Models are compared on Accuracy, Precision, Recall, F1, and ROC-AUC. **Random Forest** is the recommended model (ROC-AUC 0.827), since it ranks late-delivery risk most reliably for proactive flagging at booking time.
+7. **Machine learning** — predicting `Late_delivery_risk` (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, KNN — class-balanced with SMOTE)
+8. **NEW — Network analysis** — tripartite graph (Region–Department–Shipping Mode) built with `networkx`; degree and betweenness centrality identify structurally critical nodes; a disruption simulation tests network resilience by removing the most central node
+9. **NEW — Demand forecasting** — Holt-Winters exponential smoothing (damped trend, multiplicative seasonality) on monthly sales, validated on a 6-month holdout
+10. **NEW — Interactive dashboard** — Power BI dashboard combining KPIs, delay/profit breakdowns, network centrality, and the sales forecast, with searchable slicers for Region, Department, Shipping Mode, and Customer Segment
 
 ## Requirements
 
@@ -50,25 +58,13 @@ matplotlib
 seaborn
 scikit-learn
 imbalanced-learn
+networkx
+statsmodels
 ```
-
-Install with:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
-```
-
-> The notebook was originally built in Google Colab and mounts Google Drive to load the CSV. If running locally, replace the `drive.mount(...)` / `pd.read_csv('/content/drive/...')` cell with a local file path.
-
-## Usage
-
-```bash
-jupyter notebook Untitled0.ipynb
-```
-
-Run all cells in order. The final cells fit and evaluate the classifiers; re-run the modeling section to reproduce the comparison table.
 
 ## Key Results
+
+### Late-Delivery Risk Model
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
 |---|---|---|---|---|---|
@@ -78,11 +74,22 @@ Run all cells in order. The final cells fit and evaluate the classifiers; re-run
 | Gradient Boosting | 0.725 | 0.893 | 0.590 | 0.710 | 0.778 |
 | Logistic Regression | 0.697 | 0.833 | 0.590 | 0.690 | 0.709 |
 
-Top predictive features (Random Forest): order hour, scheduled shipping days, shipping mode, order month, order region, product category.
+### Network Centrality (Top 5 by Betweenness)
+
+| Node | Degree Centrality | Betweenness Centrality |
+|---|---|---|
+| DEPT: Fitness | 0.730 | 0.797 |
+| REGION: Central Asia | 0.162 | 0.255 |
+| SHIP: Same Day | 0.297 | 0.200 |
+| DEPT: Book Shop | 0.297 | 0.173 |
+| DEPT: Health and Beauty | 0.216 | 0.112 |
+
+### Demand Forecast
+
+6-month holdout validation MAPE: **72.45%** — flagged in the full report as a limitation requiring further investigation, not presented as a finished production forecast.
 
 ## About Me
 
 **Samrina Sarkar Sammi** — M2 Data Science & Network Intelligence student, Télécom SudParis
 
 [LinkedIn](https://www.linkedin.com/in/samrina-sarkar-sammi-a8b716424/) · [GitHub](https://github.com/samrinasarkar-sammi) · samrinasarkar@gmail.com
-
