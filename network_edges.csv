@@ -1,0 +1,212 @@
+Source,Target,order_count,avg_delay
+Canada,Apparel,254,0.2440944881889764
+Canada,Fan Shop,333,0.4954954954954955
+Canada,Fitness,7,0.7142857142857143
+Canada,Footwear,87,0.27586206896551724
+Canada,Golf,171,0.3157894736842105
+Canada,Outdoors,55,0.4727272727272727
+Caribbean,Apparel,2151,0.4630404463040446
+Caribbean,Fan Shop,3061,0.5138843515191114
+Caribbean,Fitness,96,0.5520833333333334
+Caribbean,Footwear,698,0.6031518624641834
+Caribbean,Golf,1519,0.5345622119815668
+Caribbean,Outdoors,426,0.49765258215962443
+Central Africa,Apparel,431,0.6125290023201856
+Central Africa,Fan Shop,616,0.5892857142857143
+Central Africa,Fitness,22,0.045454545454545456
+Central Africa,Footwear,130,0.5538461538461539
+Central Africa,Golf,337,0.6735905044510386
+Central Africa,Outdoors,80,0.8
+Central America,Apparel,7352,0.5231229597388466
+Central America,Fan Shop,10558,0.5369388141693503
+Central America,Fitness,348,0.5258620689655172
+Central America,Footwear,2243,0.5644226482389657
+Central America,Golf,5221,0.5338057843325034
+Central America,Outdoors,1452,0.522038567493113
+Central Asia,Apparel,166,0.5421686746987951
+Central Asia,Fan Shop,206,0.5679611650485437
+Central Asia,Fitness,3,2.3333333333333335
+Central Asia,Footwear,41,0.7560975609756098
+Central Asia,Golf,99,0.6363636363636364
+Central Asia,Outdoors,27,0.7777777777777778
+East Africa,Apparel,504,0.6111111111111112
+East Africa,Fan Shop,714,0.5280112044817927
+East Africa,Fitness,13,0.9230769230769231
+East Africa,Footwear,155,0.6
+East Africa,Golf,310,0.5290322580645161
+East Africa,Outdoors,85,0.6352941176470588
+East of USA,Apparel,1729,0.6009253903990746
+East of USA,Fan Shop,2593,0.5588121866563825
+East of USA,Fitness,79,0.9113924050632911
+East of USA,Footwear,552,0.40217391304347827
+East of USA,Golf,1341,0.5279642058165548
+East of USA,Outdoors,323,0.56656346749226
+Eastern Asia,Apparel,1816,0.5583700440528634
+Eastern Asia,Book Shop,19,0.2631578947368421
+Eastern Asia,Discs Shop,380,0.4789473684210526
+Eastern Asia,Fan Shop,2335,0.5224839400428265
+Eastern Asia,Fitness,136,0.6691176470588235
+Eastern Asia,Footwear,488,0.5614754098360656
+Eastern Asia,Golf,1089,0.4995408631772268
+Eastern Asia,Health and Beauty ,80,0.525
+Eastern Asia,Outdoors,456,0.6096491228070176
+Eastern Asia,Pet Shop,123,0.5365853658536586
+Eastern Asia,Technology,51,0.47058823529411764
+Eastern Europe,Apparel,1024,0.615234375
+Eastern Europe,Fan Shop,1458,0.5733882030178327
+Eastern Europe,Fitness,44,0.6818181818181818
+Eastern Europe,Footwear,330,0.49393939393939396
+Eastern Europe,Golf,728,0.5041208791208791
+Eastern Europe,Outdoors,201,0.6268656716417911
+North Africa,Apparel,871,0.563719862227325
+North Africa,Fan Shop,1193,0.47359597652975693
+North Africa,Fitness,43,0.9302325581395349
+North Africa,Footwear,267,0.4344569288389513
+North Africa,Golf,544,0.5036764705882353
+North Africa,Outdoors,168,0.7440476190476191
+Northern Europe,Apparel,2595,0.5387283236994219
+Northern Europe,Book Shop,49,0.42857142857142855
+Northern Europe,Discs Shop,86,0.47674418604651164
+Northern Europe,Fan Shop,3418,0.5011702750146284
+Northern Europe,Fitness,107,0.9065420560747663
+Northern Europe,Footwear,788,0.5571065989847716
+Northern Europe,Golf,1683,0.49316696375519903
+Northern Europe,Outdoors,426,0.607981220657277
+Northern Europe,Technology,256,0.421875
+Oceania,Apparel,2619,0.5330278732340588
+Oceania,Book Shop,26,0.46153846153846156
+Oceania,Discs Shop,432,0.5787037037037037
+Oceania,Fan Shop,3369,0.5093499554764025
+Oceania,Fitness,189,0.6666666666666666
+Oceania,Footwear,740,0.504054054054054
+Oceania,Golf,1548,0.5510335917312662
+Oceania,Health and Beauty ,72,0.3055555555555556
+Oceania,Outdoors,555,0.5747747747747748
+Oceania,Pet Shop,137,0.708029197080292
+Oceania,Technology,46,0.34782608695652173
+South America,Apparel,3748,0.5498932764140875
+South America,Fan Shop,5487,0.5403681428831785
+South America,Fitness,173,0.5549132947976878
+South America,Footwear,1185,0.459915611814346
+South America,Golf,2769,0.5070422535211268
+South America,Outdoors,822,0.5072992700729927
+South Asia,Apparel,2032,0.5625
+South Asia,Book Shop,12,0.16666666666666666
+South Asia,Discs Shop,355,0.5154929577464789
+South Asia,Fan Shop,2510,0.5804780876494023
+South Asia,Fitness,143,0.6153846153846154
+South Asia,Footwear,534,0.5430711610486891
+South Asia,Golf,1213,0.5894476504534213
+South Asia,Health and Beauty ,82,0.5487804878048781
+South Asia,Outdoors,452,0.5641592920353983
+South Asia,Pet Shop,75,0.8133333333333334
+South Asia,Technology,47,0.425531914893617
+South of  USA ,Apparel,1077,0.606313834726091
+South of  USA ,Fan Shop,1455,0.5257731958762887
+South of  USA ,Fitness,51,0.37254901960784315
+South of  USA ,Footwear,323,0.6934984520123839
+South of  USA ,Golf,753,0.598937583001328
+South of  USA ,Outdoors,196,0.4489795918367347
+Southeast Asia,Apparel,2429,0.5664882667764513
+Southeast Asia,Book Shop,31,0.9354838709677419
+Southeast Asia,Discs Shop,444,0.5045045045045045
+Southeast Asia,Fan Shop,3114,0.4993577392421323
+Southeast Asia,Fitness,198,0.6060606060606061
+Southeast Asia,Footwear,606,0.5742574257425742
+Southeast Asia,Golf,1444,0.5408587257617729
+Southeast Asia,Health and Beauty ,112,0.5892857142857143
+Southeast Asia,Outdoors,524,0.48282442748091603
+Southeast Asia,Pet Shop,137,0.5985401459854015
+Southeast Asia,Technology,97,0.5670103092783505
+Southern Africa,Apparel,296,0.38175675675675674
+Southern Africa,Fan Shop,417,0.5515587529976019
+Southern Africa,Fitness,12,0.16666666666666666
+Southern Africa,Footwear,97,0.422680412371134
+Southern Africa,Golf,213,0.38967136150234744
+Southern Africa,Outdoors,65,0.26153846153846155
+Southern Europe,Apparel,2484,0.47302737520128824
+Southern Europe,Book Shop,44,0.8409090909090909
+Southern Europe,Discs Shop,73,0.6027397260273972
+Southern Europe,Fan Shop,3302,0.47577225923682614
+Southern Europe,Fitness,115,0.22608695652173913
+Southern Europe,Footwear,692,0.48988439306358383
+Southern Europe,Golf,1620,0.4981481481481482
+Southern Europe,Outdoors,445,0.4067415730337079
+Southern Europe,Technology,255,0.5803921568627451
+US Center ,Apparel,1573,0.5816910362364908
+US Center ,Fan Shop,2136,0.5547752808988764
+US Center ,Fitness,82,0.2804878048780488
+US Center ,Footwear,421,0.6864608076009501
+US Center ,Golf,1130,0.6336283185840708
+US Center ,Outdoors,311,0.4662379421221865
+West Africa,Apparel,927,0.5620280474649406
+West Africa,Fan Shop,1374,0.5094614264919942
+West Africa,Fitness,46,0.30434782608695654
+West Africa,Footwear,299,0.48494983277591974
+West Africa,Golf,717,0.5062761506276151
+West Africa,Outdoors,208,0.6490384615384616
+West Asia,Apparel,1600,0.559375
+West Asia,Fan Shop,2160,0.5537037037037037
+West Asia,Fitness,72,0.4305555555555556
+West Asia,Footwear,483,0.5962732919254659
+West Asia,Golf,1112,0.5080935251798561
+West Asia,Outdoors,319,0.6300940438871473
+West of USA ,Apparel,2134,0.5834114339268979
+West of USA ,Fan Shop,2906,0.5006882312456985
+West of USA ,Fitness,84,0.39285714285714285
+West of USA ,Footwear,614,0.4609120521172638
+West of USA ,Golf,1462,0.5417236662106704
+West of USA ,Outdoors,395,0.6050632911392405
+Western Europe,Apparel,7072,0.5709841628959276
+Western Europe,Book Shop,210,0.3952380952380952
+Western Europe,Discs Shop,173,0.5549132947976878
+Western Europe,Fan Shop,9318,0.5685769478428847
+Western Europe,Fitness,311,0.5273311897106109
+Western Europe,Footwear,2118,0.5339943342776204
+Western Europe,Golf,4745,0.575763962065332
+Western Europe,Outdoors,1276,0.6081504702194357
+Western Europe,Technology,644,0.6211180124223602
+Apparel,First Class,7094,1.0
+Apparel,Same Day,2538,0.0
+Apparel,Second Class,9292,1.9973095135600516
+Apparel,Standard Class,27960,0.0005722460658082976
+Book Shop,First Class,53,1.0
+Book Shop,Same Day,42,0.0
+Book Shop,Second Class,64,1.921875
+Book Shop,Standard Class,232,0.05603448275862069
+Discs Shop,First Class,261,1.0
+Discs Shop,Same Day,98,0.0
+Discs Shop,Second Class,370,1.9594594594594594
+Discs Shop,Standard Class,1214,0.02800658978583196
+Fan Shop,First Class,9750,1.0
+Fan Shop,Same Day,3454,0.0
+Fan Shop,Second Class,12519,1.971163830976915
+Fan Shop,Standard Class,38310,-0.007491516575306709
+Fitness,First Class,384,1.0
+Fitness,Same Day,126,0.0
+Fitness,Second Class,458,2.091703056768559
+Fitness,Standard Class,1406,-0.006401137980085348
+Footwear,First Class,2150,1.0
+Footwear,Same Day,745,0.0
+Footwear,Second Class,2692,1.974368499257058
+Footwear,Standard Class,8304,-0.005780346820809248
+Golf,First Class,5025,1.0
+Golf,Same Day,1697,0.0
+Golf,Second Class,6149,2.013986013986014
+Golf,Standard Class,18897,-0.01677514949462878
+Health and Beauty ,First Class,62,1.0
+Health and Beauty ,Same Day,13,0.0
+Health and Beauty ,Second Class,63,1.8095238095238095
+Health and Beauty ,Standard Class,208,-0.004807692307692308
+Outdoors,First Class,1398,1.0
+Outdoors,Same Day,474,0.0
+Outdoors,Second Class,1810,2.055801104972376
+Outdoors,Standard Class,5585,0.0023276633840644584
+Pet Shop,First Class,81,1.0
+Pet Shop,Same Day,38,0.0
+Pet Shop,Second Class,114,1.8859649122807018
+Pet Shop,Standard Class,239,0.04184100418410042
+Technology,First Class,255,1.0
+Technology,Same Day,68,0.0
+Technology,Second Class,275,2.1454545454545455
+Technology,Standard Class,798,-0.09273182957393483
